@@ -1,12 +1,14 @@
 import './App.css';
-import Counter from "./components/counter"
+// import Counter from "./components/counter"
 import { Application } from './components/application';
 import Skills from "./components/skills"
+import Users from "./components/users"
 
 function App() {
   return (
     <div className="App">
-        <Counter />
+      <Users />
+        {/* <Counter /> */}
         {/* <Application />
         <Skills skills={["Javascript, reactjs, Html"]}/> */}
     </div>
