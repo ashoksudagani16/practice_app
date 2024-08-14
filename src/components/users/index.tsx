@@ -1,23 +1,26 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState } from 'react';
+import UserForm from './UserForm';
+import UserList from './UserList';
 
-function Users() {
-    const [users, setUsers] =useState<string[]>([]);
-    const [error, setError] = useState<string | null>("")
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(data => setUsers(data.map((user: {name: string}) => user.name)))
-      .catch(error=> setError(error))
-    }, [])
-    return (
-        <div>
-            <h1>Users</h1>
-            {error && <p>Error</p>}
-         <ul>
-            {users.map((user) => <li>{user}</li>)}
-         </ul>
-        </div>
-    )
+interface User {
+  name: string;
+  email: string;
 }
 
-export default Users
+const App: React.FC = () => {
+  const [users, setUsers] = useState<User[]>([]);
+
+  const handleAddUser = (name: string, email: string) => {
+    setUsers([...users, { name, email }]);
+  };
+
+  return (
+    <div>
+      <UserForm onSubmit={handleAddUser} />
+      <hr />
+      <UserList users={users} />
+    </div>
+  );
+};
+
+export default App;
