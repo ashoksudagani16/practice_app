@@ -23,7 +23,7 @@ const UserList: React.FC<UserListProps> = ({ users }) => {
               <th style={{ border: '1px solid #ddd', padding: '8px' }}>Email</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody data-testid="users">
             {users.map((user, index) => (
               <tr key={index}>
                 <td style={{ border: '1px solid #ddd', padding: '8px' }}>{user.name}</td>
