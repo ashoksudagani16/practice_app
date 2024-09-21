@@ -11,7 +11,6 @@ const App: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
 
   const handleAddUser = (name: string, email: string) => {
-    console.log(name)
     setUsers([...users, { name, email }]);
   };
 
