@@ -9,6 +9,7 @@ const AddUserForm: React.FC<UserFormProps> = ({ onSubmit }) => {
   const [email, setEmail] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
+    console.log({e})
     e.preventDefault();
     onSubmit(name, email);
     setName('');
