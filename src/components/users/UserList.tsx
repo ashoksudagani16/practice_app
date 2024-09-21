@@ -10,6 +10,7 @@ interface UserListProps {
 }
 
 const UserList: React.FC<UserListProps> = ({ users }) => {
+  console.log({users})
   return (
     <div style={{ maxWidth: '400px', margin: '20px auto' }}>
       <h2>User List</h2>
