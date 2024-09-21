@@ -4,7 +4,6 @@ import { SkillProps } from './skills.types';
 function Index(props: SkillProps) {
     const { skills } = props;
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-
     useEffect(() => {
         setTimeout(() => {
             setIsLoggedIn(true)
