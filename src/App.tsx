@@ -4,12 +4,14 @@ import './App.css';
 // import Skills from "./components/skills"
 // import UsersList from "./components/usersList"
 // import UserProfile from "./components/userProfile"
-import Users from "./components/users"
+// import Users from "./components/users"
+import DummyUsers from "./pages/DummyUsersPage/DummyUsersPage"
 
 function App() {
   return (
     <div className="App">
-      <Users />
+      <DummyUsers />
+      {/* <Users /> */}
         {/* <Counter /> */}
         {/* <Application />
         <Skills skills={["Javascript, reactjs, Html"]}/> */}
