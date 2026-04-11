@@ -5,7 +5,7 @@ import RemarksModal from '../../components/RemarksModal/RemarksModal';
 const DummyUsers = () => {
     const [rows, setRows] = useState([
         { id: 1, status: 'pending', remarks: '' },
-        { id: 3, status: 'approved', remarks: 'Approved by managerrrr' },
+        { id: 3, status: 'approved', remarks: 'Approved by manager' },
         { id: 4, status: 'rejected', remarks: 'Rejected due to missing details' },
       ]);
 
